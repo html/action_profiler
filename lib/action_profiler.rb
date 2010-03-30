@@ -38,7 +38,7 @@ module ActionController
             response.body.replace(output.string)
 
             response.status = 200
-            response.location = nil
+            response.location = request.path
 
             response.headers['Content-Length'] = response.body.size
             response.headers['Content-Type'] = 'application/octet-stream'
